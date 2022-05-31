@@ -5,21 +5,15 @@ import axios from 'axios';
 function App() {
   
   const getPost = async () =>{
-    try {
-      let formData = new FormData(); 
-      
+    try {     
       //Url del API
       const urlPost = "https://jsonplaceholder.typicode.com/posts";
 
       let result = await axios({
         urlPost,
-        method: 'GET',
-        dataType: 'json',
-        ContentType: 'application/json',
-        data: formData
-        });
+        method: 'GET'
+      });
         
-
         let datos =result.data;
         console.log(datos);
         
@@ -27,10 +21,6 @@ function App() {
           alert("No hay datos :( ");
           return(0);
         }
-
-        
-
-
     }
     catch (error) {
       console.log(error);
@@ -52,27 +42,45 @@ function App() {
           </div>
         </div>
         <div id='cambio'>
+
+          {/*[API POST]*/}
           <div className='row text-center mt-4'>
             <div className='col-md-12'>
               <h1>Posts</h1>
             </div>
           </div>
 
-          <div className='table-responsive-md'>
-            <table className='table'>
+          <div className='table-responsive'>
+            <table className='table table-bordered'>
               <thead>
               <tr>
-                <th scope="col">Id del Usuario</th>
+                <th scope="col">id</th>
                 <th scope="col">#</th>
                 <th scope="col">Titulo</th>
-                <th scope="col">Post</th>
+                <th scope="col">Post Completo</th>
               </tr>
               </thead>
               <tbody>
-              
+                {/*[Aquí va lo que salga del json]*/}
               </tbody>
             </table>
           </div>
+
+          {/*[API Imagenes]*/}
+          <div className='row text-center mt-4'>
+            <div className='col-md-12'>
+              <h1>Imágenes</h1>
+            </div>
+          </div>
+
+          <div className='row text-center mt-4'>
+            <div className='col-md-3'>
+              
+              <img src=''/>
+
+            </div>
+          </div>
+
         </div>
       </div>
       
