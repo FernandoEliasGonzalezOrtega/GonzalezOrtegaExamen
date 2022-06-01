@@ -7,10 +7,10 @@ function App() {
   const getPost = async () =>{
     try {     
       //Url del API
-      const urlPost = "https://jsonplaceholder.typicode.com/posts";
+      const url = "https://jsonplaceholder.typicode.com/posts";
 
       let result = await axios({
-        urlPost,
+        url,
         method: 'GET'
       });
         
