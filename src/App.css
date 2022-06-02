@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+
+.bg1{
+  background-color: cornsilk;
+}
+
+.bg2{
+  background-color: lavender;
+}
